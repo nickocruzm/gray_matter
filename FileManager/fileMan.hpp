@@ -12,6 +12,8 @@ class File_Man{
         vector<string> fileNames;
     public:
         File_Man(); // Default Constructor
+
+        void add_file(string fileName) //appends the name to fileNames
 };
 
 #endif
