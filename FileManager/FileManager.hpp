@@ -1,16 +1,16 @@
-#ifndef _FILEMAN_HPP_
-#define _FILEMAN_HPP_
+#ifndef _FILEMANAGER_HPP_
+#define _FILEMANAGER_HPP_
 
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 
-class FileMan{
+class FileManager{
     protected:
         std::vector<std::string> fileNames;
     public:
-        FileMan::FileMan(); // Default Constructor
+        FileManager(); // Default Constructor
 
         void add_file(std::string fileName); //appends the name to fileNames
         
