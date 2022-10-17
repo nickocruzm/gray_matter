@@ -13,8 +13,9 @@ class FileManager{
         FileManager(); // Default Constructor
 
         void add_file(std::string fileName); //appends the name to fileNames
-        
+
         void read(std::string& ); // reads in file.
+        
 };
 
 #endif
