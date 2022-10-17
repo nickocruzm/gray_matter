@@ -1,7 +1,7 @@
-#include "FileMan.hpp"
+#include "FileManager/FileManager.hpp"
 
 int main(){
-    FileMan* f = new FileMan();
+    FileManager* f = new FileManager();
 
     f->add_file("test.txt");
 }
