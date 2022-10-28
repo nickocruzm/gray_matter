@@ -9,6 +9,7 @@
 class FileManager{
     protected:
         std::vector<std::string> fileNames;
+        
     public:
         FileManager(); // Default Constructor
 
