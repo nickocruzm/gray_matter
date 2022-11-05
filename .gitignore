@@ -32,7 +32,8 @@
 *.app
 
 # vscode
-.vscode/c_cpp_properties.json
+/.vscode/
+
 
 # text
 *.txt
