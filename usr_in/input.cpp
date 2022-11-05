@@ -2,6 +2,7 @@
 
 int main(){
     ifstream f;
+    
 
     f.open("input.txt");
 
