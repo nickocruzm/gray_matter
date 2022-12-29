@@ -1,7 +1,7 @@
 #ifndef __BRAIN_HPP__
 #define __BRAIN_HPP__
 
-#include "Basic_Headers.hpp"
+#include "../Basic_Headers.hpp"
 
 class Brain{
 
