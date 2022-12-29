@@ -1,14 +1,8 @@
 #ifndef _FILEMANAGER_HPP_
 #define _FILEMANAGER_HPP_
 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
+#include "Basic_Headers.hpp"
 
-using std::vector; using std::string;
-using std::ifstream; 
-using std::cout; using std::endl;
 class FileManager{
     protected:
         vector<string> files;
