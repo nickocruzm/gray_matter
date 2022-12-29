@@ -6,16 +6,19 @@
 #include <string>
 #include <vector>
 
+using std::vector; using std::string;
+using std::ifstream; 
+using std::cout; using std::endl;
 class FileManager{
     protected:
-        std::vector<std::string> fileNames;
+        vector<string> files;
         
     public:
         FileManager(); // Default Constructor
 
-        void add_file(std::string fileName); //appends the name to fileNames
+        void add_file(string fileName); // appends the name to fileNames
 
-        void read(std::string& ); // reads in file.
+        vector<string> read(); // reads file into vector.
         
 };
 

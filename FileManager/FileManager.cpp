@@ -1,29 +1,43 @@
 #include "FileManager.hpp"
 
 FileManager::FileManager(){
-    this->fileNames = {};
+    this->files = {};
 }
 
-void FileManager::add_file(std::string file){
-    this->fileNames.push_back(file);
+void FileManager::add_file(string file){
+    this->files.push_back(file);
 }
-void FileManager::read(std::string& f){
-    std::ifstream file;
-    file.open(f);
-    std::string line;
 
+vector<string> FileManager::read(){
+    ifstream file;
+    string file_name;
+    vector<string> content;
+
+    if (this->files.size() == 1){
+        file_name = this->files[0];
+    }
+    else{
+        cout<<"too many files to read"<<endl;
+        return content;
+    }
+
+    file.open(file_name);
+    string line;
     if(file.is_open()){
+
         while(std::getline(file,line))
         {
-            std::cout<< line << std::endl;
+            content.push_back(line);
         }
         file.close();
     }
 
     else{
-        std::cout<<"Failed to open file" << std::endl;
+        cout<<"Failed to open file" << endl;
     }
     file.close();
+
+    return content;
 
 };
 
