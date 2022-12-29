@@ -7,6 +7,7 @@ class Brain{
 
     protected:
         vector<string> data;
+        set<string> unq_words;
 
     private:
 
@@ -14,7 +15,7 @@ class Brain{
         Brain();
         void set_data(vector<string>& );
 
-        int get_uniqueWords();
+        int count_uniqueWords();
 
 
 

@@ -3,14 +3,21 @@
 
 Brain::Brain(){
     this->data = {};
+    this->unq_words = {};
 }
 
 void Brain::set_data(vector<string>& data){
     this->data = data;
 }
 
-int Brain::get_uniqueWords(){
-    
+int Brain::count_uniqueWords(){
+    for(unsigned int i = 0; i < this->data.size(); i++){
+        this->unq_words.insert(this->data[i]);
 
+    }
+
+    return this->unq_words.size();
 }
+
+
 
