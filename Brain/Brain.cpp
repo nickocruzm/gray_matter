@@ -11,11 +11,9 @@ void Brain::set_data(vector<string>& data){
 }
 
 int Brain::count_uniqueWords(){
-    for(unsigned int i = 0; i < this->data.size(); i++){
+    for(int i = 0; i < this->data.size(); i++){
         this->unq_words.insert(this->data[i]);
-
     }
-
     return this->unq_words.size();
 }
 

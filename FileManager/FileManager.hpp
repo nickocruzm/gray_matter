@@ -10,6 +10,8 @@ class FileManager{
     public:
         FileManager(); // Default Constructor
 
+        FileManager(string fileName); // fileName argument Constructo
+
         void add_file(string fileName); // appends the name to fileNames
 
         vector<string> read(); // reads file into vector.
