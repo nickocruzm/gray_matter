@@ -1,21 +1,19 @@
 #ifndef __BRAIN_HPP__
 #define __BRAIN_HPP__
 
-#include "../Basic_Headers.hpp"
+#include "../Headers.hpp"
+#include "../Content/Content.hpp"
 
 class Brain{
-
-    protected:
-        vector<string> data;
-        set<string> unq_words;
-
-    private:
-
     public:
+        set<string> unq_words = {};
+        Content content;
+
+        Brain(Content );
         Brain();
-        void set_data(vector<string>& );
 
         int count_uniqueWords();
+        int count_uniqueWords(vector<string>& ); // Argument error when passing Reader.get_words() func
 
 
 
