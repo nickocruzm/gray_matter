@@ -1,21 +1,19 @@
 #ifndef __CONTENT_HPP__
 #define __CONTENT_HPP__
 
-#include "../Basic_Headers.hpp"
-
+#include "../Headers.hpp"
 class Content{
-    protected:
-        vector<string> lines;
-        vector<string> words;
 
     public:
-        Content(){
-            this->lines = {};
-            this->words = {};
-        };
+        vector<string> lines;
+        vector<string> words;
+        
+        Content();
+
+        void assign_lines(vector<string>& );
+        void assign_words(vector<string>& );
 
         void lines_append(string line);
-
         void words_append(string word);
 };
 
