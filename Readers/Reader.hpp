@@ -1,21 +1,27 @@
 #ifndef __READER_HPP__
 #define __READER_HPP__
 
-#include "Basic_Headers.hpp"
+#include "../Content/Content.hpp"
+#include "../Headers.hpp"
 
 class Reader{
-    private:
-        string fileName;
-
-    protected:
-        Content content;
 
     public:
+        string fileName;
+        Content content;
+
+        
         Reader();
         Reader(string );
-        
-        Content read();
+
+        void read();
         void display_words();
+
+        Content get_allContent();
+
+        vector<string> get_lines();
+
+        vector<string> get_words();
 
 };
 

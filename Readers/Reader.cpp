@@ -1,26 +1,7 @@
 #include "Reader.hpp"
 
-struct Content{
-    vector<string> lines;
-    vector<string> words;
-
-    Content(){
-        this->lines = {};
-        this->words = {};
-    };
-
-    void lines_append(string line){
-        this->lines.push_back(line);
-    }
-
-    void words_append(string word){
-        this->words.push_back(word);
-    }
-};
-
-
 Reader::Reader(){
-    this->content;
+    this->content = Content();
 }
 
 Reader::Reader(string fileName){
@@ -28,14 +9,17 @@ Reader::Reader(string fileName){
 }
 
 void Reader::display_words(){
-
-    for(auto w: this->content.words){
-        cout<< w << endl;
-    }
-    
+    for(int i = 0; i < this->content.words.size(); i++){
+        cout<< this->content.words[i]<< endl;
+    }    
 }
 
-Content Reader::read(){
+void Reader::read(){
+    if(this->fileName.empty()){
+        cout<< "NO FILENAME, Reader object, not assigned a fileName" << endl;
+        exit(-1);
+    }
+
     ifstream fileStream;
     fileStream.open(this->fileName);
 
@@ -63,5 +47,16 @@ Content Reader::read(){
     else{
         cout<<"Failed to open file" << endl;
     }
-
 };
+
+Content Reader::get_allContent(){
+    return this->content;
+}
+
+vector<string> Reader::get_lines(){
+    return this->content.lines;
+}
+
+vector<string> Reader::get_words(){
+    return this->content.words;
+}
